@@ -1,13 +1,19 @@
-# Md Img Downloader
+# Markdown Posts Utilities
 
-Download images in Markdown files and update links.
+I use markdown to write my blog posts, and here are some of the scripts I've used to migrate my blogs, etc.
 
-This project references [mufidu/download_imgs.py](https://gist.github.com/mufidu/f7b795f844f1ee4dc78e55123d5a398b) but is written independently.
+## `img-downloader.py`
 
-## Usage
+This script download images in Markdown files and update the links.
+
+## Reference
+
+- [mufidu/download_imgs.py](https://gist.github.com/mufidu/f7b795f844f1ee4dc78e55123d5a398b)
+
+### Usage
 
 ```text
-usage: MdImgDownloader [-h] [--only-basename-link] [-o OUTPUT_DIR] dir [dir ...]
+usage: python img-downloader.py [-h] [--only-basename-link] [-o OUTPUT_DIR] dir [dir ...]
 
 Download images in Markdown files and update links
 
@@ -22,10 +28,17 @@ options:
                         directory to save images
 ```
 
-If you don't specify the `OUTPUT_DIR`, the script will create a dir based on the name of the md file.
-
-If you want to use this script to update all the image links in your Hexo posts, run:
+- If you don't specify the `OUTPUT_DIR`, the script will create a dir based on the name of the markdown file.
+- If you want to use this script to update all the image links in your [Hexo](https://hexo.io) posts, run:
 
 ```bash
 python MdImgDownloader /path-to-your-hexo-project/source/_posts --only-basename-link
 ```
+
+## `s3-uploader.py`
+
+This script uploads images to a s3-compatible service, written in the help of `gpt-4o`.
+
+## `tagenerator.py`
+
+This script uses the power of LLMs to generate tags for blog posts.

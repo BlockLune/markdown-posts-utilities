@@ -1,6 +1,3 @@
-# @file s3-uploader.py
-# @author gpt-4o
-
 # Configurations
 bucket_name = ''
 s3_subfolder = 'blog-imgs'  # Specify the subfolder path here, default to '' for root
